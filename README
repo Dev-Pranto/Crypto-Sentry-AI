@@ -2,18 +2,17 @@
 
 <div align="center">
 
-![Crypto-Sentry Demo]
-![Frontend]
-![Backend]
-![AI]
-
 *A smart cryptocurrency monitoring platform that detects market anomalies using AI*
+
+[![Frontend](https://img.shields.io/badge/Frontend-React_TypeScript-blue)](https://reactjs.org/)
+[![Backend](https://img.shields.io/badge/Backend-FastAPI_Python-green)](https://fastapi.tiangolo.com/)
+[![AI](https://img.shields.io/badge/AI-TensorFlow_LSTM-orange)](https://tensorflow.org/)
 
 [Live Demo](#live-demo) • [Features](#features) • [Quick Start](#quick-start) • [Tech Stack](#tech-stack)
 
 </div>
 
-## 📖 What is Crypto-Sentry AI?
+## 📖 Overview
 
 Crypto-Sentry AI started as my final year project - the goal was to build something that could actually help cryptocurrency traders spot unusual market activity before it becomes obvious.
 
@@ -21,136 +20,90 @@ Most crypto tools just show you prices and basic charts. I wanted to build somet
 
 The result is this full-stack application that combines real-time market data with a trained LSTM Autoencoder model to detect anomalies in cryptocurrency pricing and volume patterns.
 
-## 🎯 What It Actually Does
+## ✨ Key Features
 
-### For Regular Users:
-- **Watch crypto prices** in real-time with interactive charts
-- **Set up price alerts** for your favorite cryptocurrencies
-- **Get AI-powered insights** about market conditions
-- **Monitor multiple timeframes** from 1 day to 1 year
-
-### The AI Magic:
-- **Learns normal market behavior** from historical data
-- **Spots unusual patterns** that might indicate manipulation or big moves
-- **Gives confidence scores** so you know how reliable the detection is
-- **Works in real-time** as new market data comes in
-
-## ✨ Cool Features I Built
-
-### 🧠 Smart AI Detection
-- **Trained LSTM Autoencoder** that actually understands crypto market patterns
+### 🧠 AI-Powered Detection
+- **LSTM Autoencoder** trained on crypto market patterns
 - **Real-time anomaly scoring** with confidence levels
 - **Multiple cryptocurrency support** (BTC, ETH, ADA, and more)
 - **Adaptive thresholds** that adjust to market volatility
 
-### 📊 Beautiful Dashboard
-- **Interactive price charts** with volume overlays
+### 📊 Interactive Dashboard
+- **Real-time price charts** with volume overlays
 - **Multiple timeframe views** (1D, 7D, 1M, 1Y)
-- **Real-time market statistics** and trends
 - **Professional trading-style interface**
+- **Market statistics and trends**
 
 ### 🔔 Smart Alert System
 - **Price target alerts** for specific levels
-- **AI anomaly alerts** when the model detects something unusual
+- **AI anomaly alerts** when unusual patterns detected
 - **Trend direction alerts** for momentum changes
-- **Email/push notifications** (ready for integration)
+- **Email/push notifications** ready for integration
 
-### 🔐 Secure & Scalable
-- **JWT authentication** with proper security
-- **SQLite database** (easy to switch to PostgreSQL)
-- **RESTful API design** with proper documentation
-- **Docker-ready** for easy deployment
+## 🛠 Tech Stack
 
-## 🛠 Tech Stack - Why I Chose These
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Frontend** | React + TypeScript, Tailwind CSS, Shadcn/ui, Recharts | Type-safe, beautiful UI with interactive charts |
+| **Backend** | FastAPI, Python, SQLAlchemy, JWT | High-performance API with automatic documentation |
+| **AI/ML** | TensorFlow/Keras, Scikit-learn, Pandas, yFinance | Advanced anomaly detection and data processing |
+| **Infrastructure** | Docker, Docker Compose, Nginx | Containerized deployment and serving |
 
-### Frontend:
-- **React + TypeScript** - For type safety and great developer experience
-- **Tailwind CSS** - Because writing custom CSS for every component is tedious
-- **Shadcn/ui** - Beautiful, accessible components out of the box
-- **Recharts** - For those smooth, interactive charts
-
-### Backend:
-- **FastAPI** - Lightning fast with automatic API docs (seriously, it's amazing)
-- **Python** - Because the AI/ML ecosystem is incredible
-- **SQLAlchemy** - Database operations that don't make me want to cry
-- **JWT Authentication** - Proper security without the headache
-
-### AI/ML:
-- **TensorFlow/Keras** - For building and training the LSTM model
-- **Scikit-learn** - For data preprocessing and feature engineering
-- **Pandas** - Because data manipulation should be easy
-- **yFinance** - Free, reliable market data
-
-### Infrastructure:
-- **Docker** - So this actually runs on other people's machines
-- **Docker Compose** - One command to rule them all
-- **Nginx** - Fast, reliable static file serving
-
-## 🚀 Quick Start - Get Running in 5 Minutes
+## 🚀 Quick Start
 
 ### Prerequisites
 - Docker and Docker Compose installed
-- That's it. Seriously.
 
-### The One-Command Setup
+### One-Command Setup
 ```bash
-# Clone this repository
-git clone https://github.com/your-username/crypto-sentry-ai
+# Clone the repository
+git clone https://github.com/Dev-Pranto/Crypto-Sentry-AI/
 cd crypto-sentry-ai
 
-# Start everything up
+# Start all services
 docker-compose up
-Wait a couple minutes (the first time takes a bit longer), then open your browser to:
+```
 
-🌐 Web App: http://localhost:3000
+Wait a couple minutes (first build takes longer), then access:
 
-📚 API Docs: http://localhost:8000/docs
+- 🌐 **Web App**: http://localhost:3000
+- 📚 **API Docs**: http://localhost:8000/docs  
+- ❤️ **Health Check**: http://localhost:8000/health
 
-❤️ Health Check: http://localhost:8000/health
+### First Time Setup
+1. Open http://localhost:3000
+2. Click "Register" to create your account
+3. Log in and start monitoring!
 
-First Time Setup
-Open http://localhost:3000
+## 🎮 How to Use
 
-Click "Register" to create your account
+### 1. Market Overview
+- Dashboard shows Bitcoin by default
+- Switch between different timeframes
+- Toggle volume on/off for trading activity
+- Monitor AI status indicator
 
-Log in and you're ready to go!
+### 2. Alert Management
+- Click "Create Alert" in dashboard
+- Choose cryptocurrency (BTC, ETH, ADA, DOT)
+- Set alert type: Price target, AI anomaly, or trend alerts
+- Configure thresholds and save
 
-🎮 How to Use This Thing
-1. Check Market Overview
-The dashboard shows Bitcoin by default (because everyone loves BTC)
+### 3. AI Analysis
+- Click "Scan BTC" for quick AI analysis
+- Monitor AI confidence scores
+- View anomaly detection results
+- Uses real market data with demo fallback
 
-Switch between different timeframes using the buttons
+### 4. Portfolio Monitoring
+- View all active alerts in one place
+- Track triggered alerts
+- Manage and delete alerts as needed
 
-Toggle volume on/off to see trading activity
+## 🔧 Development Setup
 
-Check the AI status indicator - green means real data, yellow means demo mode
-
-2. Set Up Alerts
-Click "Create Alert" in the dashboard
-
-Choose a cryptocurrency (BTC, ETH, ADA, DOT)
-
-Set alert type: Price target, AI anomaly, or trend alerts
-
-Set your threshold and save
-
-3. Run AI Analysis
-Click the "Scan BTC" button for quick AI analysis
-
-Watch the AI confidence score and anomaly detection
-
-The system uses both real market data and fallback demo data
-
-4. Monitor Your Portfolio
-View all your active alerts in one place
-
-See which ones have been triggered
-
-Manage and delete alerts as needed
-
-🔧 For Developers - Running Without Docker
-Backend Setup
-bash
+### Backend (Without Docker)
+```bash
 cd backend
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -158,52 +111,45 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Set up environment
+# Configure environment
 cp .env.example .env
-# Edit .env with your settings
 
-# Run the server
+# Start development server
 uvicorn app.main:app --reload
-Frontend Setup
-bash
+```
+
+### Frontend (Without Docker)
+```bash
 cd frontend
 npm install
 
-# Create environment file
+# Configure environment
 cp .env.example .env
-# Set your API URL
 
 # Start development server
 npm run dev
-🧠 About the AI Model
-The Problem I Was Solving
-Cryptocurrency markets are crazy volatile. Normal statistical methods often fail because what's "normal" keeps changing. I needed something that could learn patterns over time.
+```
 
-The Solution: LSTM Autoencoder
-LSTM (Long Short-Term Memory) - Remembers patterns over time, perfect for time series data
+## 🧠 AI Model Details
 
-Autoencoder Architecture - Learns to compress and reconstruct normal patterns
+### Problem Statement
+Cryptocurrency markets exhibit extreme volatility where traditional statistical methods often fail due to constantly changing "normal" patterns.
 
-Anomaly Detection - When reconstruction error is high, something unusual is happening
+### Solution Architecture
+- **LSTM (Long Short-Term Memory)**: Captures temporal patterns in time series data
+- **Autoencoder**: Learns to compress and reconstruct normal market behavior
+- **Anomaly Detection**: Flags patterns with high reconstruction error
 
-How It Works
-Training Phase: The model learns what normal price/volume patterns look like
+### Model Performance
+| Metric | Value |
+|--------|-------|
+| Accuracy | ~85% on historical test data |
+| False Positive Rate | <15% |
+| Inference Time | <2 seconds for real-time analysis |
 
-Feature Engineering: Calculates technical indicators (RSI, volatility, volume changes, etc.)
+## 📁 Project Structure
 
-Real-time Analysis: Compares current market behavior to learned patterns
-
-Scoring: Generates anomaly scores with confidence levels
-
-Model Performance
-Accuracy: ~85% on historical test data
-
-False Positive Rate: <15%
-
-Inference Time: <2 seconds for real-time analysis
-
-📁 Project Structure
-text
+```
 crypto-sentry-ai/
 ├── 📁 backend/
 │   ├── 📁 app/
@@ -211,7 +157,7 @@ crypto-sentry-ai/
 │   │   ├── 📁 core/          # Config and security
 │   │   ├── 📁 db/            # Database models
 │   │   ├── 📁 schemas/       # Pydantic models
-│   │   ├── 📁 ai_model/      # The brain of the operation!
+│   │   ├── 📁 ai_model/      # AI core functionality
 │   │   │   ├── 📁 model_artifacts/    # Trained LSTM model
 │   │   │   ├── anomaly_detector.py    # AI analysis logic
 │   │   │   └── service.py             # AI service layer
@@ -229,78 +175,61 @@ crypto-sentry-ai/
 │   └── Dockerfile
 ├── docker-compose.yml
 └── README.md
-🚨 Common Issues & Solutions
-"API calls are failing / using demo data"
-CoinGecko API has rate limits
+```
 
-The app automatically falls back to realistic demo data
+## 🚨 Common Issues & Solutions
 
-This is normal and doesn't affect the AI functionality
+| Issue | Solution |
+|-------|----------|
+| API calls failing / using demo data | CoinGecko API rate limits - app falls back to realistic demo data |
+| Docker compose taking forever | First build downloads dependencies - subsequent starts are faster |
+| AI model not loading | Check model files exist, system falls back to Isolation Forest algorithm |
 
-"Docker compose is taking forever"
-First build downloads all dependencies
+## 🛣 Roadmap
 
-Subsequent starts are much faster
+### Short Term
+- [ ] Add more cryptocurrencies (SOL, XRP, etc.)
+- [ ] Email notifications for alerts
+- [ ] Mobile app version
+- [ ] Social features (share analyses)
 
-Check if ports 3000 and 8000 are available
+### Long Term
+- [ ] Portfolio tracking and analytics
+- [ ] Advanced AI models (Transformer networks)
+- [ ] Predictive price forecasting
+- [ ] Exchange integration for auto-trading
 
-"AI model isn't loading"
-Check the model files exist in backend/app/ai_model/model_artifacts/
+## 🤝 Contributing
 
-The system falls back to Isolation Forest algorithm if LSTM fails
+We welcome contributions! Here's how to help:
 
-Both methods work well for anomaly detection
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-idea`
+3. Commit your changes: `git commit -m 'Add some amazing idea'`
+4. Push to the branch: `git push origin feature/amazing-idea`
+5. Open a Pull Request
 
-🛣 Roadmap & Future Ideas
-Short Term:
-Add more cryptocurrencies (SOL, XRP, etc.)
+## 📜 License
 
-Email notifications for alerts
-
-Mobile app version
-
-Social features (share analyses)
-
-Long Term:
-Portfolio tracking and analytics
-
-Advanced AI models (Transformer networks)
-
-Predictive price forecasting
-
-Integration with exchanges for auto-trading
-
-🤝 Contributing
-Found a bug? Have an idea for improvement? I'd love your help!
-
-Fork the repository
-
-Create your feature branch (git checkout -b feature/amazing-idea)
-
-Commit your changes (git commit -m 'Add some amazing idea')
-
-Push to the branch (git push origin feature/amazing-idea)
-
-Open a Pull Request
-
-📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-🙋‍♂️ About Me
+## 🙋‍♂️ About Me
+
 I'm a computer science student passionate about AI, fintech, and building things that solve real problems. This project represents months of learning about machine learning, full-stack development, and cryptocurrency markets.
 
 If you're interested in the technical details or want to chat about AI in finance, feel free to reach out!
 
-📞 Support & Contact
-Email: your.email@example.com
+## 📞 Contact
 
-LinkedIn: Your LinkedIn
+- **Email**: [hamimishthiaque@gmail.com](mailto:hamimishthiaque@gmail.com)
+- **LinkedIn**: [Pranto AI](https://www.linkedin.com/in/pranto-ai/)
 
-Issues: GitHub Issues
+---
 
 <div align="center">
+
 If you find this project useful, please give it a ⭐ - it means a lot!
 
-Built with ❤️ and way too much coffee
+**Built with ❤️ and way too much coffee**
 
-</div> ```
+</div>
