@@ -1,0 +1,30 @@
+# Backend Framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# Database
+sqlalchemy==2.0.29
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# Authentication & Security
+pydantic[email]==2.7.1
+pydantic-settings==2.2.1
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+
+# Background Tasks & Caching
+celery==5.4.0
+redis==5.0.4
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.31.0
+
+# AI/ML Packages - UPDATED VERSIONS
+tensorflow-cpu==2.16.2  # Updated to fix typing-extensions conflict
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.0
+joblib==1.4.2
+yfinance==0.2.18
